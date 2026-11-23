@@ -1,0 +1,25 @@
+name: "RustDesk API & Address Book"
+description: "Self-hosted Address Book and API server for RustDesk (lejianwen/rustdesk-api)"
+version: "1.0.0"
+slug: "rustdesk_api"
+init: false
+arch:
+  - aarch64
+  - amd64
+ports:
+  21114/tcp: 21114
+ports_description:
+  21114/tcp: "RustDesk API & Web Admin Console"
+webui: "http://[HOST]:[PORT:21114]/_admin/"
+options:
+  id_server: "192.168.1.50:21116"
+  relay_server: "192.168.1.50:21117"
+  api_server: "http://192.168.1.50:21114"
+  public_key: ""
+  lang: "en"
+schema:
+  id_server: str
+  relay_server: str
+  api_server: str
+  public_key: str
+  lang: list(en|zh-CN|zh-TW|es|fr|de|ru)

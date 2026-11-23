@@ -1,0 +1,16 @@
+configuration:
+  id_server:
+    name: ID Server (hbbs)
+    description: Your Home Assistant IP or domain with port 21116 (e.g., 192.168.1.50:21116).
+  relay_server:
+    name: Relay Server (hbbr)
+    description: Your Home Assistant IP or domain with port 21117 (e.g., 192.168.1.50:21117).
+  api_server:
+    name: API Server URL
+    description: Full URL clients use to reach this API (e.g., http://192.168.1.50:21114).
+  public_key:
+    name: Public Key
+    description: Contents of id_ed25519.pub from your RustDesk server add-on logs.
+  lang:
+    name: Web UI Language
+    description: Default language for the web admin interface.
