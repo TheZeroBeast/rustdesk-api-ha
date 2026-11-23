@@ -1,6 +1,6 @@
 name: "RustDesk API & Address Book"
 description: "Self-hosted Address Book and API server for RustDesk (lejianwen/rustdesk-api)"
-version: "1.0.0"
+version: "1.0.1"
 slug: "rustdesk_api"
 init: false
 arch:
