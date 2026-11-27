@@ -5,10 +5,9 @@ CONFIG_PATH=/data/options.json
 
 # Ensure persistent storage for both server keys (/data) and API database (/data/api)
 mkdir -p /data/api
-if [ ! -L /app/data ]; then
-    rm -rf /app/data
-    ln -s /data/api /app/data
-fi
+
+# Point the SQLite database directly to /data/api instead of symlinking /app/data
+export RUSTDESK_API_DB_NAME="/data/api/rustdesk.db"
 
 export RUSTDESK_API_RUSTDESK_ID_SERVER=$(jq -r '.id_server' $CONFIG_PATH)
 export RUSTDESK_API_RUSTDESK_RELAY_SERVER=$(jq -r '.relay_server' $CONFIG_PATH)

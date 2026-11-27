@@ -1,6 +1,6 @@
 name: "RustDesk Server & API"
 description: "All-in-one RustDesk ID/Relay Server, API, Web Admin, and Web Client"
-version: "1.0.0"
+version: "1.0.1"
 slug: "rustdesk_server_api"
 init: false
 ingress: true
