@@ -1,6 +1,6 @@
 name: "RustDesk Server & API"
 description: "All-in-one RustDesk ID/Relay Server, API, Web Admin, and Web Client"
-version: "1.0.2"
+version: "1.0.3"
 slug: "rustdesk_server_api"
 init: false
 webui: "http://[HOST]:[PORT:21114]/_admin/"
@@ -8,6 +8,7 @@ arch:
   - aarch64
   - amd64
 ports:
+  8098/tcp: 8098
   21114/tcp: 21114
   21115/tcp: 21115
   21116/tcp: 21116
@@ -16,6 +17,7 @@ ports:
   21118/tcp: 21118
   21119/tcp: 21119
 ports_description:
+  8098/tcp: "Web UI Redirector"
   21114/tcp: "API & Web UI"
   21115/tcp: "NAT type test"
   21116/tcp: "ID registration & heartbeat"
@@ -29,6 +31,7 @@ options:
   id_server: "192.168.1.199:21116"
   relay_server: "192.168.1.199:21117"
   api_server: "http://192.168.1.199:21114"
+  web_ui_url: ""
   encrypted_only: true
   must_login: false
   jwt_key: ""
@@ -36,6 +39,7 @@ schema:
   id_server: str
   relay_server: str
   api_server: str
+  web_ui_url: str?
   encrypted_only: bool
   must_login: bool
   jwt_key: str?
