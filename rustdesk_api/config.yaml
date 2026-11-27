@@ -1,9 +1,9 @@
 name: "RustDesk Server & API"
 description: "All-in-one RustDesk ID/Relay Server, API, Web Admin, and Web Client"
-version: "1.0.2"
+version: "1.0.3"
 slug: "rustdesk_server_api"
 init: false
-webui: "http://[HOST]:[PORT:21114]/_admin/"
+webui: "http://rustdesk.[HOST]"
 arch:
   - aarch64
   - amd64
